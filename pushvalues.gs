@@ -16,14 +16,13 @@ function onEdit(e){
   // Get the destination cell (in this case, the one in column E on the same row as the cell being edited in column C), and split it into an array, then get the value of the source cell for comparison
   var target = allCells.getCell(activeCellRow, 5).getValue();
   var targetArray = target.split('\r');
-   var cell = allCells.getCell(activeCellRow, 3).getValue();
  //if the first element in the array isn’t equal to the value of the source cell (in other words, there’s a NEW edit in the source cell and not just a click, add the value of the source cell plus a carriage return to the destination cell
 
-  if (targetArray[0] != cell) { 
-   var insert = sheet.getRange(activeCellRow, 5).setValue(cell +'\r' + target);
+  if (targetArray[0] != e.value) { 
+   var insert = sheet.getRange(activeCellRow, 5).setValue(e.value +'\r' + target);
    }
   }
   
-  else if //add same procedure for other columns you want to do this to
+  //else if //add same procedure for other columns you want to do this to
   
 }
